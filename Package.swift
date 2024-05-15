@@ -6,14 +6,16 @@ import PackageDescription
 let package = Package(
     name: "SimpleMath",
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SimpleMath",
             targets: ["SimpleMath"]),
     ],
+    dependencies: [
+         .package(url: "https://github.com/apple/swift-docc-plugin", from: "1.0.0"),
+    ],
     targets: [
         .binaryTarget(name: "SimpleMath",
                       url: "https://github.com/fs-rich-tilt/SimpleMath/raw/main/SimpleMath.xcframework.zip",
-                      checksum: "2bf4eea2b002edaa46f06f058bccb37c7dafb99c2d2340a5d81e9c91aa8e8448")
+                      checksum: "f360315a57b3d90c6f09ba62b19076a0d1390f5d31261bdda69122a17bd41b41")
     ]
 )
